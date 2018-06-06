@@ -1,0 +1,19 @@
+1.1
+What is data product？
+1.The programing combined together by data and algorithm
+数据是编程界的货币，
+数据产品：Amazon 推荐系统，FaceBook 推荐系统
+web爬虫，pagerank算法
+数据产品从生成的数据中获取价值->生成效应
+1.2
+Create a large scale data-product with hadoop
+分析工作流：采集->整理->建模->报告和可视化
+细粒度能限制我们的想像力
+传统的统计方法：对较大的数据集采取抽样，用较小的代替总体
+分布式计算、分布式数据库
+云计算资源：访问大规模数据，成本较低->数据挖掘
+量化自我
+数据科学流水线：数据->采集->整理->计算->可视化->报告
+支持构建可拓展和可自动化的方案
+大数据工作流
+数据采集：Sqoop,Kafka；数据管理;Hive，Hbase：分析：Spark的GraphX，MLlib,mhout

@@ -1,0 +1,35 @@
+数据团队成员：数据工程师，数据分析师，领域专家
+大数据集适合于采用聚集的方法
+HDFS+YARN
+分布式系统必须满足的几个要求：
+容错性，可恢复性，一致性，可拓展性
+数据湖泊
+2.2 hadoop架构
+MapReduce（批处理），Spark（内存计算），Storm（流式计算），Hive（Sql）
+YARN（负载和资源管理），HDFS（Hadoop分布式系统）
+都构筑于廉价磁盘之上
+2.2.1 Hadoop集群
+master节点，worker节点
+NameNode（master，目录树），Secondry NameNode（master 服务，备份），DataNode（worker服务，储存管理Hdfs），ResourceManager（master，为应用程序分配和监视可用的资源），ApplicationMaster（master，协调应用程序），Nodemanager（worker，单点运行，管理任务）
+文件系统查找的所有请求都要发送到nodemanager
+2.3.1 基本文件系统操作
+hadoop fs -help
+hadoop fs -copyFromLocal shakespeare.txt shakespeare.txt
+hadoop fs -put /home/analyst/shakespere.txt hdfs://localhost/admin/home/hadoop/dfs/shakespere.txt
+hadoop fs mkdir corpora
+hadoop fs -ls
+hadoop fs -cat shakespeare.txt | less
+hadoop fs -tail shakespeare.txt | less
+hadoop fs -get shakespeare.txt ./shakespeare.from-remote.txt
+hadoop fs -chmod 664 shakespeare.txt//文件权限：
+2.3.3 其他HDFS接口
+javaAPI,http api，python api，
+2.4 分布式计算
+MapReduce，Spark，Storm
+2.4.1 MapReduce 函数式编程模型
+map(),reduce()
+键值作为输入输出
+2.4.2 集群上的MapReduce
+<key,value>->map->shuffle and sort->reduce->output<key,value>
+emit()与yield函数相似
+
