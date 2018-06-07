@@ -75,7 +75,8 @@ def main(sc):
     #航空公司总延误时间
     delays=delays.reduceByKey(add).collect()
     delays=sorted(delays,key=itemgetter(1))
-    
+    datset=sc.parallelize(delays).collect()
+    datset.saveAsTextFile('delays.csv')
     #驱动程序提供输出
     for d in delays:
         print('%0.0f minutes delayed \t%s' % (d[1],d[0]))
