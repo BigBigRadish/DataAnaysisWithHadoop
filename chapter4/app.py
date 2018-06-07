@@ -21,7 +21,7 @@ DATE_FMT="%Y-%m-%d"
 TIME_FMT="%H%M"
 
 fields=('date','airline','flightnum','origin','dest','dep','dep_delay','arv','arv_delay','airtime','distance')
-Flight=namedtuple('Flight',fields)
+Flight=namedtuple('Flight',fields)#占用内存更小，处理效率更高，轻量级数据结构，允许通过名称而不是位置访问数据。轻量级元组
 
 def parse(row):
     row[0]=datetime.strptime(row[0],DATE_FMT).date()
