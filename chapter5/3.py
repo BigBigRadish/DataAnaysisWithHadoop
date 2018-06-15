@@ -10,7 +10,7 @@ Jiangxi university of finance and economics
 #向量，矩阵和数据框虽然紧凑，但scale太大；pair和stripe用来表示矩阵，都是基于键的计算
 #建立单词共现矩阵
 from itertools import combinations
-from chapter3.mapper import Mapper
+from chapter3.mapper import  Mapper
 from chapter3.reducer import Reducer
 class WordPairsMapper(Mapper):
     def map(self):
